@@ -7,5 +7,6 @@ angular.module('movieApp', [
 	'$movieApp.nowplayingCtrl',
 	'$movieApp.detailsCtrl',
 	'$movieApp.indexCtrl',
-	'$movieApp.searchCtrl'
+	'$movieApp.searchCtrl',
+	'$movieApp.directiveCtrl'
 	])

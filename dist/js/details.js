@@ -1,0 +1,1 @@
+angular.module("$movieApp.detailsCtrl",[]).controller("$detailsCtrl",["$scope","$movieServ","$routeParams",function(o,e,l){e.jsonp("https://api.douban.com/v2/movie/subject/"+l.id,{},function(e){o.movie=e,console.log(e),o.$apply()})}]);

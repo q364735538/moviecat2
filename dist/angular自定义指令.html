@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><style>ul li{
+				display: inline-block;
+				float: left;
+				list-style: none;
+				width: 100px;
+				height:50px;
+				line-height: 50px;
+				border: 1px solid #ccc;
+				text-align: center;
+				background-color: hotpink;
+			}
+			ul li a {
+   			    color: #000;
+   			    text-decoration: none;
+   			}
+   			.active {
+   			    background-color: #0f0;
+   			}</style></head><body ng-app="myApp"><ul><li ng-active class="active"><a href="">首页</a></li><li ng-active><a href="">正在热映</a></li><li ng-active><a href="">即将上映</a></li><li ng-active><a href="">top250</a></li></ul><script src="node_modules/angular/angular.js"></script><script>angular.module('myApp',[])
+    		.directive('ngActive',function(){
+    			return{
+    				link:function(scope,element,attribute){
+    					element.on('click',function(){
+    						element.parent().find('li').removeClass('active');
+    						element.addClass('active')
+    					})
+    				}
+    			}
+    		})</script></body></html>

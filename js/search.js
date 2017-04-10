@@ -19,16 +19,16 @@ angular.module('$movieApp.searchCtrl', [])
 				if($routeParams.pageid==1){
 					$routeParams.pageid=1;
 					for (var i = 0; i < 2; i++) {
-						aSotp[i].setAttribute('onclick','return false')
+						aSotp[i].setAttribute('onclick','return false');
 					};		
-				}
+				};
 				$scope.nextPage=($routeParams.pageid-0)+1;
 				$scope.pageCount=Math.ceil(data.total/5);
 				$scope.total=data.total;
 				if($routeParams.pageid==$scope.pageCount){
 					$routeParams.pageid=$scope.pageCount;
 					for (var i = 2; i < 3; i++) {
-						aSotp[i].setAttribute('onclick','return false')
+						aSotp[i].setAttribute('onclick','return false');
 					};
 				}
 				

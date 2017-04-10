@@ -9,6 +9,7 @@
 </head>
 <!-- 8.在主页使用movieApp模块  由于要使用路由有默认的控制器所以这里不需要指定控制器-->
 <body ng-app="movieApp" ng-controller="$indexCtrl">
+
     <!-- 顶部导航栏开始 -->
     <div class="top">
         <div class="header">
@@ -27,10 +28,10 @@
         <nav class="nav">
             <ul>
                 <!--li中添加 active 类样式，显示焦点状态。-->
-                <li class="active"><a href="#/">首页</a></li>
-                <li><a href="#/nowplaying">正在热映</a></li>
-                <li><a href="#/later">即将上映</a></li>
-                <li><a href="#/top250">Top250</a></li>
+                <li ng-active="#/" class="active"><a href="#/">豆瓣首页</a></li>
+                <li ng-active="#/nowplaying"><a href="#/nowplaying">正在热映</a></li>
+                <li ng-active="#/later"><a href="#/later">即将上映</a></li>
+                <li ng-active="#/top250"><a href="#/top250">Top250</a></li>
             </ul>
         </nav>
     </div>
@@ -63,6 +64,7 @@
     <script src="js/details.js"></script>
     <script src="js/index.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/directive.js"></script>
 
 </body>
 
